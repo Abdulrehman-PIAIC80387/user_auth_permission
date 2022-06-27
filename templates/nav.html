@@ -1,0 +1,11 @@
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Navbar</span>
+    <span class="navbar-brand mb-0 h1"><a href="{% url 'add' %}">Add Record</a></span>
+
+    {% if user.groups.all.0.name == "newsales" %}
+    <span class="navbar-brand mb-0 h1"><a href="{% url 'list_invoice' %}">View record</a></span>
+    
+    {% endif %}
+    <span class="navbar-brand mb-0 h1"><a href="{% url 'logout' %}">Logout</a></span>
+   
+  </nav>
